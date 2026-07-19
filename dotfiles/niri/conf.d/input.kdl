@@ -1,0 +1,28 @@
+// https://niri-wm.github.io/niri/Configuration:-Input
+input {
+    keyboard {
+
+        repeat-rate 30
+        repeat-delay 400
+
+        xkb {
+            layout "fr"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+    }
+
+    trackpoint {
+
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}

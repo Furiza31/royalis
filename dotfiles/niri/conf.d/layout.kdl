@@ -1,0 +1,21 @@
+// https://niri-wm.github.io/niri/Configuration:-Layout
+layout {
+    gaps 15
+
+    center-focused-column "on-overflow"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}
