@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  dotfiles = "${config.home.homeDirectory}/nixos-config/dotfiles";
+in
 {
   home.username = "furiza";
   home.homeDirectory = "/home/furiza";
@@ -12,9 +15,14 @@
     vscode
   ];
 
-  xdg.configFile."kitty".source = ../dotfiles/kitty;
-  xdg.configFile."niri".source = ../dotfiles/niri;
-  xdg.configFile.".zshrc".source = ../dotfiles/.zshrc;
+  xdg.configFile."kitty".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/kitty";
+
+  xdg.configFile."niri".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/niri";
+
+  home.file.".zshrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/.zshrc";
 
   programs.home-manager.enable = true;
 }
