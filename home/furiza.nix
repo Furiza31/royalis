@@ -14,6 +14,7 @@ in
     kitty
     vscode
     codex
+    flavours
   ];
 
   xdg.configFile."kitty".source =
