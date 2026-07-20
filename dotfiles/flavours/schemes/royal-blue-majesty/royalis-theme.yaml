@@ -1,0 +1,22 @@
+scheme: "royalis-theme"
+author: "Furiza"
+
+# Backgrounds
+base00: "0A101D"
+base01: "141B2D"
+base02: "232E4A"
+base03: "475470"
+base04: "8291B0"
+base05: "C5D1EB"
+base06: "E0E7F5"
+base07: "F4F7FB"
+
+# Accents
+base08: "E64553"
+base09: "E68A4F"
+base0A: "E5B53C"
+base0B: "40A070"
+base0C: "38B5C6"
+base0D: "4169E1"
+base0E: "8959D6"
+base0F: "B0437A"

@@ -1,0 +1,9 @@
+# Flavours looks here through Home Manager:
+# ~/.config/flavours -> ~/nixos-config/dotfiles/flavours
+shell = "sh -c '{}'"
+
+[[items]]
+file = "~/.config/niri/conf.d/appearance.kdl"
+template = "niri"
+rewrite = true
+hook = "niri msg action load-config-file >/dev/null 2>&1 || true"
