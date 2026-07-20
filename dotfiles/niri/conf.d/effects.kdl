@@ -1,0 +1,26 @@
+// Visual effects and their intensity. Colors stay in appearance.kdl.
+layout {
+    shadow {
+        on
+        softness 20
+        spread 10
+        offset x=0 y=5
+    }
+}
+
+overview {
+    workspace-shadow {
+        // off
+        softness 40
+        spread 10
+        offset x=0 y=10
+    }
+}
+
+blur {
+    on
+    passes 3
+    offset 3.0
+    noise 0.02
+    saturation 1.5
+}

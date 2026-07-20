@@ -1,4 +1,5 @@
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
+// App-specific window rules. Global decoration defaults live in decorations.kdl.
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}

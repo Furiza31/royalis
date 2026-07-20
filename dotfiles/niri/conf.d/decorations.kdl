@@ -1,0 +1,27 @@
+// Window decoration structure and dimensions.
+layout {
+    focus-ring {
+        off
+    }
+
+    border {
+        on
+        width 2
+    }
+
+    tab-indicator {
+        hide-when-single-tab
+        width 4
+        gap 7.5
+        length total-proportion=0.35
+        position "left"
+        place-within-column
+    }
+}
+
+window-rule {
+    geometry-corner-radius 15
+    clip-to-geometry true
+}
+
+prefer-no-csd

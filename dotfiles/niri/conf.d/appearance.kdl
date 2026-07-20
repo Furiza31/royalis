@@ -1,46 +1,15 @@
-
 // https://niri-wm.github.io/niri/Configuration:-Appearance
+// Theme values: colors plus cursor theme/size. Shape, spacing, and behavior live in
+// decorations.kdl, effects.kdl, overview.kdl, and recent-windows.kdl.
 layout {
-
-    always-center-single-column
-
-    default-column-display "tabbed"
-
-    center-focused-column "on-overflow"
-
-    focus-ring {
-        off
-    }
-
     border {
-        on
-
-        width 2
         active-color "#ffc87f"
         inactive-color "#505050"
-
         urgent-color "#9b0000"
     }
 
     shadow {
-        on
-
-        softness 20
-
-        spread 10
-
-        offset x=0 y=5
-
         color "#0007"
-    }
-
-    tab-indicator {
-        hide-when-single-tab
-        width 4
-        gap 7.5
-        length total-proportion=0.35
-        position "left"
-        place-within-column
     }
 }
 
@@ -48,35 +17,18 @@ overview {
     backdrop-color "#262626"
 
     workspace-shadow {
-        // off
-        softness 40
-        spread 10
-        offset x=0 y=10
         color "#00000050"
     }
 }
 
 recent-windows {
-    debounce-ms 0
-
-    open-delay-ms 0
-
     highlight {
         active-color "#999999ff"
         urgent-color "#ff9999ff"
-        padding 20
-        corner-radius 0
-    }
-
-    previews {
-        max-height 480
-        max-scale 0.5
     }
 }
 
-window-rule {
-    geometry-corner-radius 15
-    clip-to-geometry true
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 48
 }
-
-prefer-no-csd

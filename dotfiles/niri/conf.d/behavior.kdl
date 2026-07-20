@@ -1,3 +1,4 @@
+// General compositor behavior that is not input, layout, rules, or binds.
 hotkey-overlay {
     skip-at-startup
 }
@@ -11,15 +12,8 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "breeze_cursors"
-    xcursor-size 48
-
     hide-when-typing
     hide-after-inactive-ms 1000
-}
-
-overview {
-    zoom 0.5
 }
 
 clipboard {
@@ -28,12 +22,4 @@ clipboard {
 
 config-notification {
     disable-failed
-}
-
-blur {
-    on
-    passes 3
-    offset 3.0
-    noise 0.02
-    saturation 1.5
 }
