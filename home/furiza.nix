@@ -13,6 +13,7 @@ in
     tree
     kitty
     vscode
+    codex
   ];
 
   xdg.configFile."kitty".source =
