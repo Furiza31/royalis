@@ -7,3 +7,9 @@ file = "~/.config/niri/conf.d/appearance.kdl"
 template = "niri"
 rewrite = true
 hook = "niri msg action load-config-file >/dev/null 2>&1 || true"
+
+[[items]]
+file = "~/.config/kitty/conf.d/theme.conf"
+template = "kitty"
+rewrite = true
+hook = "pkill -USR1 kitty >/dev/null 2>&1 || true"
