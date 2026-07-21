@@ -29,11 +29,11 @@ in
   xdg.configFile."niri".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/niri";
 
+  xdg.configFile."quickshell".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/quickshell";
+
   home.file.".zshrc".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/.zshrc";
-
-  home.file."quickshell".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/quickshell";
 
   programs.home-manager.enable = true;
 }
