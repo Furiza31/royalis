@@ -25,11 +25,22 @@ window-rule {
 
     draw-border-with-background false
 
-    opacity 0.9
+    opacity 0.95
 
     background-effect {
         blur true
     }
 }
 
+layer-rule {
+    match namespace="^quickshell-wallpaper$"
+
+    place-within-backdrop true
+}
+
 prefer-no-csd
+
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 48
+}
