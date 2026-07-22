@@ -10,7 +10,7 @@ layout {
         color "#4c4f6926"
     }
 
-    background-color "#eff1f5"
+    background-color "transparent"
 }
 
 overview {
