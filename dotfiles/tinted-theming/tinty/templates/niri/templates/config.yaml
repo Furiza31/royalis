@@ -1,3 +1,0 @@
-catppuccin-niri:
-  filename: themes/base24-{{ scheme-slug }}.kdl
-  supported-systems: [base24]

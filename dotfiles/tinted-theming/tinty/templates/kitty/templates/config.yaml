@@ -1,3 +1,0 @@
-catppuccin-kitty:
-  filename: themes/base24-{{ scheme-slug }}.conf
-  supported-systems: [base24]
