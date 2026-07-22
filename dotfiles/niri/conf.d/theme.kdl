@@ -1,29 +1,29 @@
-// https://niri-wm.github.io/niri/Configuration:-Appearance
+// Catppuccin Latte
 layout {
     border {
-        active-color "#4183c4"
-        inactive-color "#c8c8bf"
-        urgent-color "#e17055"
+        active-color "#1e66f5"
+        inactive-color "#bcc0cc"
+        urgent-color "#d20f39"
     }
 
     shadow {
-        color "#fbfbfbaa"
+        color "#4c4f6926"
     }
 
-    background-color "transparent"
+    background-color "#eff1f5"
 }
 
 overview {
-    backdrop-color "#fbfbfb"
+    backdrop-color "#eff1f5"
 
     workspace-shadow {
-        color "#fbfbfb80"
+        color "#4c4f6933"
     }
 }
 
 recent-windows {
     highlight {
-        active-color "#4183c4ff"
-        urgent-color "#e17055ff"
+        active-color "#1e66f5ff"
+        urgent-color "#d20f39ff"
     }
 }

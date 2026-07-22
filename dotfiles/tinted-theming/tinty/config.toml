@@ -1,0 +1,24 @@
+shell = "sh -c '{}'"
+default-scheme = "base24-catppuccin-latte"
+default-cycle-ring = "catppuccin"
+
+[[rings]]
+name = "catppuccin"
+schemes = [
+  "base24-catppuccin-latte",
+  "base24-catppuccin-frappe",
+]
+
+[[items]]
+name = "kitty"
+path = "~/nixos-config/dotfiles/tinted-theming/tinty/templates/kitty"
+themes-dir = "themes"
+supported-systems = ["base24"]
+write-to-file = ["~/.config/kitty/conf.d/theme.conf"]
+
+[[items]]
+name = "niri"
+path = "~/nixos-config/dotfiles/tinted-theming/tinty/templates/niri"
+themes-dir = "themes"
+supported-systems = ["base24"]
+write-to-file = ["~/.config/niri/conf.d/theme.kdl"]
