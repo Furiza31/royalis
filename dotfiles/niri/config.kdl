@@ -1,7 +1,7 @@
 include "conf.d/input.kdl"
 include "conf.d/outputs.kdl"
 include "conf.d/layout.kdl"
-include "conf.d/appearance.kdl"
+include "conf.d/theme.kdl"
 include "conf.d/decorations.kdl"
 include "conf.d/effects.kdl"
 include "conf.d/overview.kdl"
