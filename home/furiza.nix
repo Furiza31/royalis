@@ -14,17 +14,11 @@ in
     kitty
     vscode
     codex
-    flavours
     quickshell
   ];
 
   xdg.configFile."kitty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/kitty";
-
-  xdg.configFile."flavours".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/flavours";
-
-  xdg.dataFile."flavours/.keep".text = "";
 
   xdg.configFile."niri".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/niri";
