@@ -1,8 +1,8 @@
 // Catppuccin Latte
 layout {
     border {
-        active-color "#1e66f5"
-        inactive-color "#bcc0cc"
+        active-color "#8839ef"
+        inactive-color "#9ca0b0"
         urgent-color "#d20f39"
     }
 
@@ -23,7 +23,7 @@ overview {
 
 recent-windows {
     highlight {
-        active-color "#1e66f5ff"
+        active-color "#8839efff"
         urgent-color "#d20f39ff"
     }
 }
