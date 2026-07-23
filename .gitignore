@@ -5,3 +5,5 @@ result-*
 *.key
 *.pem
 secrets/
+dotfiles/vscode/**
+!dotfiles/vscode/settings.json

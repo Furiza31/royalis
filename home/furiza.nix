@@ -53,8 +53,27 @@ in
   xdg.configFile."Code/User".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/vscode";
 
+  xdg.configFile."starship.toml".source = 
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship.toml";
+
   home.file.".zshrc".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/.zshrc";
 
   programs.home-manager.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" "colored-man-pages" ];
+    };
+  };
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
