@@ -5,8 +5,8 @@
    "workbench.startupEditor":"none",
    "update.showReleaseNotes":true,
    "workbench.colorTheme":"Catppuccin Latte",
-   "editor.fontFamily":"Google Sans Code Proportional",
-   "terminal.integrated.fontFamily":"Google Sans Code Proportional",
+   "editor.fontFamily":"'Google Sans Code Proportional', 'Symbols Nerd Font', 'Noto Emoji', monospace",
+   "terminal.integrated.fontFamily":"'Google Sans Code Proportional', 'Symbols Nerd Font', 'Noto Emoji', monospace",
    "terminal.integrated.fontLigatures.enabled":true,
    "editor.fontLigatures":true,
    "editor.fontSize":16
