@@ -9,6 +9,8 @@ in
 
   home.stateVersion = "26.05";
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     tree
     kitty
@@ -16,7 +18,22 @@ in
     codex
     quickshell
     bun
+
+    (stdenvNoCC.mkDerivation {
+      pname = "local-custom-fonts";
+      version = "1.0";
+      src = ../fonts;
+      dontBuild = true;
+      installPhase = ''
+        mkdir -p $out/share/fonts/truetype
+        
+        # Copies all TTF files from your fonts folder and subfolders
+        find $src -type f -name '*.ttf' -exec cp {} $out/share/fonts/truetype/ \;
+      '';
+    })
   ];
+
+
 
   xdg.configFile."kitty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/kitty";
