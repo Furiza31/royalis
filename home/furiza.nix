@@ -50,8 +50,8 @@ in
   xdg.configFile."quickshell".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/quickshell";
 
-  xdg.configFile."Code/User".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/vscode";
+  xdg.configFile."Code/User/settings.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/vscode/settings.json";
 
   xdg.configFile."starship.toml".source = 
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship.toml";
