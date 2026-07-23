@@ -26,8 +26,7 @@ in
       dontBuild = true;
       installPhase = ''
         mkdir -p $out/share/fonts/truetype
-        
-        # Copies all TTF files from your fonts folder and subfolders
+
         find $src -type f -name '*.ttf' -exec cp {} $out/share/fonts/truetype/ \;
       '';
     })
