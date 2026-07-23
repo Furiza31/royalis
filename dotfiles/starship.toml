@@ -1,14 +1,46 @@
+# Catppuccin Latte Starship prompt
+# Primary accent: Mauve #8839ef
+
+# Don't print a new line at the start of the prompt
 add_newline = false
+
+# Catppuccin Latte palette:
+# Rosewater  #dc8a78
+# Flamingo   #dd7878
+# Pink       #ea76cb
+# Mauve      #8839ef
+# Red        #d20f39
+# Maroon     #e64553
+# Peach      #fe640b
+# Yellow     #df8e1d
+# Green      #40a02b
+# Teal       #179299
+# Sky        #04a5e5
+# Sapphire   #209fb5
+# Blue       #1e66f5
+# Lavender   #7287fd
+# Text       #4c4f69
+# Subtext 1  #5c5f77
+# Subtext 0  #6c6f85
+# Overlay 2  #7c7f93
+# Overlay 1  #8c8fa1
+# Overlay 0  #9ca0b0
+# Surface 2  #acb0be
+# Surface 1  #bcc0cc
+# Surface 0  #ccd0da
+# Base       #eff1f5
+# Mantle     #e6e9ef
+# Crust      #dce0e8
 
 format = """
 $cmd_duration $directory$git_branch
   $character"""
 
 [fill]
-symbol = '-'
-style = 'fg:#8839ef'
+symbol = "-"
+style = "fg:#9ca0b0"
 
-[character]                            
+[character]
 success_symbol = "[ ](bold fg:#8839ef)"
 error_symbol = "[ ](bold fg:#d20f39)"
 
@@ -16,7 +48,7 @@ error_symbol = "[ ](bold fg:#d20f39)"
 disabled = true
 
 [git_branch]
-style = "bg:#8839ef"
+style = "bg:#8839ef fg:#eff1f5"
 symbol = "󰘬"
 truncation_length = 12
 truncation_symbol = ""
@@ -25,26 +57,29 @@ format = " 󰜥 [](bold fg:#8839ef)[$symbol $branch(:$remote_branch)](bold fg
 [git_commit]
 commit_hash_length = 4
 tag_symbol = " "
+style = "fg:#8839ef"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
+style = "bold fg:#df8e1d"
 cherry_pick = "[🍒 PICKING](bold fg:#d20f39)"
 
 [git_status]
-conflicted = " 🏳 "
-ahead = " 🏎💨 "
-behind = " 😰 "
-diverged = " 😵 "
-untracked = " 🤷 ‍"
-stashed = " 📦 "
-modified = " 📝 "
-staged = '[++\($count\)](fg:#40a02b)'
-renamed = " ✍️ "
-deleted = " 🗑 "
+style = "fg:#4c4f69"
+conflicted = "[ 🏳 ](fg:#d20f39)"
+ahead = "[ 🏎💨 ](fg:#1e66f5)"
+behind = "[ 😰 ](fg:#df8e1d)"
+diverged = "[ 😵 ](fg:#fe640b)"
+untracked = "[ 🤷 ‍](fg:#209fb5)"
+stashed = "[ 📦 ](fg:#8839ef)"
+modified = "[ 📝 ](fg:#df8e1d)"
+staged = '[++\($count\)](bold fg:#40a02b)'
+renamed = "[ ✍️ ](fg:#179299)"
+deleted = "[ 🗑 ](fg:#d20f39)"
 
 [hostname]
 ssh_only = false
-format =  "[•$hostname](bg:#8839ef bold fg:#eff1f5)[](bold fg:#8839ef)"
+format = "[•$hostname](bold fg:#eff1f5 bg:#8839ef)[](bold fg:#8839ef)"
 trim_at = ".companyname.com"
 disabled = false
 
@@ -55,16 +90,17 @@ disabled = false
 disabled = true
 threshold = -1
 symbol = " "
-style = "bold dimmed fg:#8839ef"
+style = "bold dimmed fg:#40a02b"
 
 [time]
 disabled = true
 format = '🕙[\[ $time \]]($style) '
+style = "bold fg:#8839ef"
 time_format = "%T"
 
 [username]
-style_user = "bold bg:#8839ef fg:#eff1f5"
-style_root = "bold bg:#8839ef fg:#d20f39"
+style_user = "bold fg:#eff1f5 bg:#8839ef"
+style_root = "bold fg:#eff1f5 bg:#d20f39"
 format = "[](bold fg:#8839ef)[$user]($style)"
 disabled = false
 show_always = true
@@ -72,10 +108,11 @@ show_always = true
 [directory]
 home_symbol = " "
 read_only = "  "
-style = "bg:#8839ef fg:#eff1f5"
+read_only_style = "fg:#d20f39 bg:#ccd0da"
+style = "bold fg:#4c4f69 bg:#ccd0da"
 truncation_length = 2
 truncation_symbol = ".../"
-format = '[](bold fg:#8839ef)[󰉋 → $path]($style)[](bold fg:#8839ef)'
+format = "[](bold fg:#ccd0da)[󰉋 → $path]($style)[](bold fg:#ccd0da)"
 
 [directory.substitutions]
 "Desktop" = "  "
@@ -88,4 +125,4 @@ format = '[](bold fg:#8839ef)[󰉋 → $path]($style)[](bold fg:#8839ef)'
 
 [cmd_duration]
 min_time = 0
-format = '[](bold fg:#8839ef)[󰪢 $duration](bold bg:#8839ef fg:#eff1f5)[](bold fg:#8839ef)'
+format = "[](bold fg:#8839ef)[󰪢 $duration](bold fg:#eff1f5 bg:#8839ef)[](bold fg:#8839ef)"
