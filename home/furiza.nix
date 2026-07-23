@@ -54,8 +54,6 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/vscode";
 
   xdg.configFile."starship.toml".source = 
-
-  home.file.".starship.toml".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship.toml";
 
   programs.home-manager.enable = true;

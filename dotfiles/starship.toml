@@ -6,21 +6,21 @@ $cmd_duration $directory$git_branch
 
 [fill]
 symbol = '-'
-style = 'fg:#9ca0b0'
+style = 'fg:#8839ef'
 
 [character]                            
-success_symbol = "[ ](bold fg:#40a02b)"
+success_symbol = "[ ](bold fg:#8839ef)"
 error_symbol = "[ ](bold fg:#d20f39)"
 
 [package]
 disabled = true
 
 [git_branch]
-style = "bg:#acb0be"
+style = "bg:#8839ef"
 symbol = "󰘬"
 truncation_length = 12
 truncation_symbol = ""
-format = " 󰜥 [](bold fg:#acb0be)[$symbol $branch(:$remote_branch)](fg:#4c4f69 bg:#acb0be)[ ](bold fg:#acb0be)"
+format = " 󰜥 [](bold fg:#8839ef)[$symbol $branch(:$remote_branch)](bold fg:#eff1f5 bg:#8839ef)[ ](bold fg:#8839ef)"
 
 [git_commit]
 commit_hash_length = 4
@@ -44,7 +44,7 @@ deleted = " 🗑 "
 
 [hostname]
 ssh_only = false
-format =  "[•$hostname](bg:#acb0be bold fg:#4c4f69)[](bold fg:#acb0be)"
+format =  "[•$hostname](bg:#8839ef bold fg:#eff1f5)[](bold fg:#8839ef)"
 trim_at = ".companyname.com"
 disabled = false
 
@@ -55,7 +55,7 @@ disabled = false
 disabled = true
 threshold = -1
 symbol = " "
-style = "bold dimmed fg:#40a02b"
+style = "bold dimmed fg:#8839ef"
 
 [time]
 disabled = true
@@ -63,19 +63,19 @@ format = '🕙[\[ $time \]]($style) '
 time_format = "%T"
 
 [username]
-style_user = "bold bg:#acb0be fg:#4c4f69"
-style_root = "bold fg:#d20f39"
-format = "[](bold fg:#acb0be)[$user]($style)"
+style_user = "bold bg:#8839ef fg:#eff1f5"
+style_root = "bold bg:#8839ef fg:#d20f39"
+format = "[](bold fg:#8839ef)[$user]($style)"
 disabled = false
 show_always = true
 
 [directory]
 home_symbol = " "
 read_only = "  "
-style = "bg:#bcc0cc fg:#4c4f69"
+style = "bg:#8839ef fg:#eff1f5"
 truncation_length = 2
 truncation_symbol = ".../"
-format = '[](bold fg:#bcc0cc)[󰉋 → $path]($style)[](bold fg:#bcc0cc)'
+format = '[](bold fg:#8839ef)[󰉋 → $path]($style)[](bold fg:#8839ef)'
 
 [directory.substitutions]
 "Desktop" = "  "
@@ -88,4 +88,4 @@ format = '[](bold fg:#bcc0cc)[󰉋 → $path]($style)[](bold fg:#bcc0cc)'
 
 [cmd_duration]
 min_time = 0
-format = '[](bold fg:#acb0be)[󰪢 $duration](bold bg:#acb0be fg:#4c4f69)[](bold fg:#acb0be)'
+format = '[](bold fg:#8839ef)[󰪢 $duration](bold bg:#8839ef fg:#eff1f5)[](bold fg:#8839ef)'
