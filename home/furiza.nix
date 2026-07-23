@@ -56,9 +56,6 @@ in
   xdg.configFile."starship.toml".source = 
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship.toml";
 
-  home.file.".zshrc".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/.zshrc";
-
   programs.home-manager.enable = true;
 
   programs.zsh = {
@@ -66,6 +63,14 @@ in
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      nxed = "code ~/nixos-config";
+      nxrb = "sudo nixos-rebuild switch --flake ~/nixos-config#royalis";
+      nxcheck = "sudo nixos-rebuild test --flake ~/nixos-config#royalis";
+      nxup = "nix flake update --flake ~/nixos-config";
+      nxgc = "sudo nix-collect-garbage --delete-older-than 30d";
+    };
 
     oh-my-zsh = {
       enable = true;
