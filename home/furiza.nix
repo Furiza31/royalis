@@ -50,6 +50,9 @@ in
   xdg.configFile."quickshell".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/quickshell";
 
+  xdg.configFile."Code/User".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/vscode";
+
   home.file.".zshrc".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/.zshrc";
 
