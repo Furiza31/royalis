@@ -9,7 +9,14 @@ in
 
   home.stateVersion = "26.05";
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [ "Google Sans" ];
+      serif = [ "Google Sans" ];
+      monospace = [ "Google Sans Code" ];
+    };
+  };
 
   home.packages = with pkgs; [
     tree
